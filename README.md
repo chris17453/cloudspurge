@@ -3,6 +3,8 @@
 ## Overview
 CloudPurge is a command-line tool for managing VMware virtual machines. It provides functionalities such as inventorying VMs, checking for blue screens, and managing user roles and permissions.
 
+
+
 ## Directory Structure
 ```
 cloudpurge/
@@ -80,6 +82,27 @@ cloudpurge/
      ```sh
      python -m cloudpurge check-user-role --user USERNAME --role-name ROLE_NAME
      ```
+
+## Example usage
+
+```bash
+(cloudpurge) [nd@nd-box-watkinslabs-com cloudpurge]$ make inventory-bluescreen 
+Loading .env environment variables...
+
+vCenter - 10.8.0.30 is good
+Mail - 10.90.0.60 is good
+Windows 2022 DataCenter - DC/AD - 10.8.0.47 is good
+weyland-yutani2 - 10.8.0.33 is good
+fubuki - PowerDNS - 10.8.0.252 is good
+KeyCloak - 10.90.0.71 is good
+app07-10.90.0.72 is good
+Screenshot for 'vim.VirtualMachine:vm-3071',vCLS-1e0856c5-8f3c-4415-ad6f-a4601f1c90c2 failed
+Windows 2022 STD - MSSQL - 10.8.0.48 has a blue screen
+mysql - 10.8.0.36 is good
+Watkins Labs WEB is good
+Screenshot for 'vim.VirtualMachine:vm-3101',vCLS-3c984e6d-e339-42b2-b749-80a8b593b221 failed
+(cloudpurge) [nd@nd-box-watkinslabs-com cloudpurge]$ 
+```
 
 ## License
 BSD 3
